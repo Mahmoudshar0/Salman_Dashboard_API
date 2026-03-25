@@ -11,9 +11,12 @@ userName: {
 password:{
     type:String,
     required:true,
-}
+},
 
-
+role: {
+    type: String,
+    enum: ["User", "Admin"],
+  },
 },{timestamps:true})
 
 const userModel=mongoose.models.User|| model('User',userSchema)

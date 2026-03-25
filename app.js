@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 app.use("/auth", authconroller)
 app.use("/user", userController)
-connectDB()
+// connectDB()
 
 app.use(notFoundMW)
 // app.use(errorHandlerMW)
