@@ -1,10 +1,10 @@
 
+import * as loginService from './service/login.js';
 import { Router } from 'express'
-import * as registrationService from './service/registration.service.js';
 
 const router = Router();
 
 
-router.post("/login", registrationService.login)
+router.post("/login", loginService.login)
 
 export default router

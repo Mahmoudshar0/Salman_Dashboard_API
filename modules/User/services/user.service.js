@@ -1,12 +1,9 @@
+import { asyncHandler } from "../../../utils/error/error.js";
+import { succesResponse } from "../../../utils/response/success.response.js";
 
 
-export const profile=async(req,res,next)=>{
-    try {
+export const profile=asyncHandler(async(req,res,next)=>{
 
         
-        return res.status(200).json({message:"user profile",user:req.user   })
-    } catch (error) {
-                return res.status(500).json({message:"Erorr",error})
-
-    }
-}
+    return succesResponse({res,data:{user:req.user}})
+    } )
