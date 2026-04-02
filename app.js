@@ -5,6 +5,7 @@ import connectDB from "./DB/connection.js";
 import authconroller from "./modules/auth/auth.controller.js"
 import userController from "./modules/User/user.controller.js" 
 import businessController from "./modules/business/business.controller.js"
+import articleController from "./modules/article/article.controller.js"
 import { globalErrorHandling } from "./utils/error/error.js";
 
 const app = express();
@@ -19,6 +20,7 @@ app.get("/", (req, res) => {
 app.use("/auth", authconroller)
 app.use("/user", userController)
 app.use("/business", businessController)
+app.use("/article", articleController)
 
 app.use(notFoundMW)
 app.use(globalErrorHandling)
